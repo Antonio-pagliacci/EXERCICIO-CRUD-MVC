@@ -1,0 +1,16 @@
+# Ignorar dependências
+node_modules/
+
+# Ignorar variáveis de ambiente
+.env
+
+# Ignorar logs
+*.log
+
+# Ignorar pastas de build temporárias
+dist/
+build/
+
+# Ignorar arquivos do sistema operacional (Windows/macOS)
+.DS_Store
+Thumbs.db
