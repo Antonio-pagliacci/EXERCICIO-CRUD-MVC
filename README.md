@@ -1,103 +1,80 @@
-# 📦 CRUD MVC com Node.js + Express + MySQL
+# 🧾 Sistema de Gestão de Estoque
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+Este projeto é uma aplicação simples de **Gestão de Estoque** com frontend em HTML/CSS/JS e backend em Node.js + Express, conectando-se a um banco de dados MySQL.
 
-Projeto de exemplo para cadastro de produtos utilizando a arquitetura MVC com Node.js, Express e MySQL.
+## 🚀 Tecnologias utilizadas
 
----
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **Backend:** Node.js, Express
+- **Banco de Dados:** MySQL
 
-## 🖼️ Demonstração
+## 🖥️ Frontend
 
-<img src="https://via.placeholder.com/800x400.png?text=Print+da+API+em+execução" alt="Demonstração da API" />
+A interface foi desenvolvida com **HTML**, **CSS** e **JavaScript puro**, oferecendo uma forma simples e intuitiva de interagir com a API de produtos.
 
----
-
-## 🚀 Tecnologias Utilizadas
-
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [MySQL](https://www.mysql.com/)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [body-parser](https://www.npmjs.com/package/body-parser)
-- [cors](https://www.npmjs.com/package/cors)
-- [nodemon](https://www.npmjs.com/package/nodemon)
-
----
-
-## 🧱 Estrutura do Projeto
+### 📁 Estrutura de arquivos
 
 ```
-exercicio-CRUD-MVC/
-│
-├── controllers/
-├── config/
-├── routes/
-├── services/
-│
-├── .env
-├── .gitignore
-├── package.json
-├── README.md
-└── server.js
+.
+├── index.html           # Página principal com listagem de produtos
+├── cadastrar.html       # Página de cadastro e edição de produtos
+├── style.css            # Estilização visual do sistema
+└── script.js            # Lógica de consumo da API e manipulação do DOM
 ```
 
----
+### 🧩 Funcionalidades disponíveis
 
-## ⚙️ Como rodar o projeto
+- 📋 Listagem de produtos cadastrados
+- ➕ Cadastro de novos produtos
+- ✏️ Edição de produtos existentes
+- 🗑️ Exclusão de produtos
+- 🔍 Busca por nome dos produtos (filtro dinâmico)
 
-1. Clone o repositório:
+### 🚀 Como utilizar
 
-```bash
-git clone https://github.com/Antonio-pagliacci/exercicio-CRUD-MVC.git
-```
+1. Certifique-se de que o backend (API Node/Express) esteja rodando corretamente na porta `3006`.
+2. Abra o arquivo `index.html` no navegador.
+3. Use o botão `NOVO` para cadastrar um novo produto ou clique nos botões ✏️ e 🗑️ para editar ou excluir um item.
+4. Utilize o campo de busca para filtrar os produtos pelo nome.
 
-2. Instale as dependências:
+## 🔧 Backend
+
+O backend foi construído com **Node.js** e **Express**, responsável por disponibilizar endpoints para o CRUD de produtos.
+
+### Rotas disponíveis
+
+- `GET /produtos` - Lista todos os produtos
+- `GET /produtos/:id` - Retorna um produto específico
+- `POST /produtos` - Cadastra um novo produto
+- `PUT /produtos/:id` - Atualiza um produto existente
+- `DELETE /produtos/:id` - Remove um produto
+
+### Como executar
 
 ```bash
 npm install
-```
-
-3. Configure o arquivo `.env` com as credenciais do seu banco:
-
-```env
-PORT=3006
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=sua_senha
-DB_NAME=nome_do_banco
-```
-
-4. Inicie o servidor:
-
-```bash
 node app.js
 ```
 
----
+Certifique-se de ter o MySQL rodando e um banco de dados configurado com a tabela `produtos`.
 
-## 🛠 Funcionalidades
+## 🗄️ Banco de dados
 
-- [x] Listar produtos
-- [x] Buscar produto por ID
-- [x] Cadastrar novo produto
-- [x] Atualizar produto
-- [x] Deletar produto
+```sql
+CREATE TABLE produtos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  preco DECIMAL(10,2),
+  estoque INT
+);
+```
 
----
+## 📌 Requisitos
 
-## 📫 Contato
-
-Desenvolvido por **Antonio da Silva Pagliacci**  
-✉️ contato.antoniopagliacci@gmail.com  
-📱 (21) 98262-8025
-
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.
+- Node.js instalado
+- MySQL em execução
+- Navegador para abrir o `index.html`
 
 ---
 
-> _Esse projeto foi desenvolvido como exercício de aprendizado na formação Fullstack com foco em backend usando arquitetura MVC._
+Feito  por Antônio da Silva Pagliacci
