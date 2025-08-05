@@ -21,6 +21,7 @@ Projeto de exemplo para cadastro de produtos utilizando a arquitetura MVC com No
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [body-parser](https://www.npmjs.com/package/body-parser)
 - [cors](https://www.npmjs.com/package/cors)
+- [nodemon](https://www.npmjs.com/package/nodemon)
 
 ---
 
@@ -29,14 +30,16 @@ Projeto de exemplo para cadastro de produtos utilizando a arquitetura MVC com No
 ```
 exercicio-CRUD-MVC/
 │
-├── controllers/      # Lógica das rotas
-├── models/           # Acesso ao banco de dados
-├── routes/           # Definição das rotas
-├── service/          # Camada intermediária (opcional)
-├── .env              # Variáveis de ambiente (NÃO VERSIONADO)
+├── controllers/
+├── config/
+├── routes/
+├── services/
+│
+├── .env
 ├── .gitignore
 ├── package.json
-└── app.js            # Arquivo principal
+├── README.md
+└── server.js
 ```
 
 ---
